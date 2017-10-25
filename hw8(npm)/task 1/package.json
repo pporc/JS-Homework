@@ -1,0 +1,14 @@
+{
+  "name": "date",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "createDir": "node index.js"
+  },
+  "author": "Jenya",
+  "license": "ISC",
+  "dependencies": {
+    "file-system": "^2.2.2"
+  }
+}

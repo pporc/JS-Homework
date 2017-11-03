@@ -1,0 +1,32 @@
+@import './functions.scss';
+
+$triangle-color: getDarken(#256072);
+
+@mixin round($angle: 10) {
+	border-radius: $angle + px;
+}
+
+@mixin triangle($direction: down) {
+	&::after {
+    content: ''; 
+    position: absolute;
+    border: 10px solid transparent;
+    
+    @if $direction == down {
+    	left: 10px; bottom: -20px;
+    	border-top: 10px solid $triangle-color;
+
+    } @else if $direction == up {
+			left: 10px; top: -20px;
+    	border-bottom: 10px solid $triangle-color;
+
+    } @else if $direction == left {
+			left: -20px; top: 5px;
+    	border-right: 11px solid $triangle-color;
+    	
+    } @else {
+			right: -20px; top: 5px;
+    	border-left: 11px solid $triangle-color;
+    }
+  }
+}

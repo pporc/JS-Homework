@@ -1,0 +1,31 @@
+@import '../functions.scss';
+@import '../mixins.scss';
+
+.date {
+	@include triangle(down);
+	@include round;
+	background-color: getDarken(#256072);
+	color: white;
+	padding: getPart(120, 5) + px;
+	position: relative;
+	margin: 0 0 10px 20px;
+	display: inline-block;
+}
+
+@for $i from 1 through 10 {
+	.width#{$i} { width: 10% * $i; }
+}
+
+.list {
+	list-style: none;
+	padding: 0;
+
+	@for $i from 1 through 20 {
+		li:nth-child(#{$i}) {
+			background-color: rgb(random(255), random(255), random(255)); 
+			margin: auto;
+			margin-bottom: 2px;
+			text-align: center;
+		}
+	}
+}

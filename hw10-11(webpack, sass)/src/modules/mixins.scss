@@ -16,16 +16,16 @@ $triangle-color: getDarken(#256072);
     	left: 10px; bottom: -20px;
     	border-top: 10px solid $triangle-color;
 
-    } @else if $direction == up {
-			left: 10px; top: -20px;
+    } @if $direction == up {
+		left: 10px; top: -20px;
     	border-bottom: 10px solid $triangle-color;
 
-    } @else if $direction == left {
-			left: -20px; top: 5px;
+    } @if $direction == left {
+		left: -20px; top: 5px;
     	border-right: 11px solid $triangle-color;
     	
-    } @else {
-			right: -20px; top: 5px;
+    } @if $direction == right {
+		right: -20px; top: 5px;
     	border-left: 11px solid $triangle-color;
     }
   }
